@@ -5,13 +5,6 @@ import { authMiddleware, redirectToSignIn } from '@clerk/nextjs';
 // See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your middleware
 export default authMiddleware({
   publicRoutes: ['/'],
-
-  // afterAuth(auth, req) {
-  //   // Handle users who aren't authenticated
-  //   if (!auth.userId && !auth.isPublicRoute) {
-  //     return redirectToSignIn({ returnBackUrl: req.url });
-  //   }
-  // },
 });
 
 export const config = {
