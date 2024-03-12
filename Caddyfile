@@ -1,0 +1,5 @@
+memo.vattsopheak.com {
+  reverse_proxy memo-app:3000 {
+    header_down Strict-Transport-Security max-age=31536000;
+  }
+}
