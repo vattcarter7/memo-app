@@ -2,6 +2,8 @@
 
 ### Fullstack NextJS simple project
 
+> Deployed project URL: https://memo.vattsopheak.com
+
 Features:
 
 - 🌐 Next.js 14 framework
@@ -14,7 +16,7 @@ Features:
 
 ### Prerequisites
 
-**Node version 14.x**
+**Node version 20.x**
 
 ### Cloning the repository
 
@@ -29,7 +31,6 @@ npm install
 ```
 
 ### Setup .env file
-
 
 ```js
 # Clerk authentication
