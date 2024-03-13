@@ -37,7 +37,7 @@ const DashboardPage = async (props: Props) => {
                 </Button>
               </Link>
               <div className="w-4"></div>
-              <h1 className="text-3xl font-bold text-gray-900">Memo</h1>
+              <h1 className="text-3xl font-bold text-gray-900">My Memo</h1>
               <div className="w-4"></div>
               <UserButton afterSignOutUrl={Env.NEXT_PUBLIC_APP_URL} />
             </div>
