@@ -54,9 +54,7 @@ const CreateMemoDialog = (props: Props) => {
       <DialogTrigger>
         <div className="border-dashed border-2 flex border-purple-600 h-full rounded-lg items-center justify-center sm:flex-col hover:shadow-xl transition hover:-translate-y-1 flex-row p-4">
           <Plus className="w-4 h-4 text-purple-600" strokeWidth={3} />
-          <h3 className="font-semibold text-purple-600 sm:mt-2">
-            New Memo
-          </h3>
+          <h3 className="font-semibold text-purple-600 sm:mt-2">New Memo</h3>
         </div>
       </DialogTrigger>
       <DialogContent>
@@ -76,7 +74,7 @@ const CreateMemoDialog = (props: Props) => {
           <div className="flex items-center gap-2">
             <Button
               type="submit"
-              className="bg-green-600"
+              className="bg-purple-600"
               disabled={createMemo.isPending}
             >
               {createMemo.isPending && (
