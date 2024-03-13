@@ -16,12 +16,12 @@ type Props = {};
 
 const DashboardPage = async (props: Props) => {
   const { userId } = await auth();
-  if (!userId) redirect("/");
+  if (!userId) redirect('/');
 
   const memos = await db
     .select()
     .from(memoTable)
-    .where(eq(memoTable.userId, userId!));
+    .where(eq(memoTable.userId, userId));
 
   return (
     <>
