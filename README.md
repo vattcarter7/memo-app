@@ -59,3 +59,11 @@ npm run prepare
 ```shell
 npm run dev
 ```
+
+### Note on digitalocean
+
+we need to authorize secret key id_rsa.pub in the .ssh folder
+
+```shell
+cat id_rsa.pub > authorized_keys
+```
