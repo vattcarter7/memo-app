@@ -1,5 +1,5 @@
 import { UserButton, auth } from '@clerk/nextjs';
-import { eq } from 'drizzle-orm';
+import { desc, eq } from 'drizzle-orm';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
@@ -21,7 +21,8 @@ const DashboardPage = async (props: Props) => {
   const memos = await db
     .select()
     .from(memoTable)
-    .where(eq(memoTable.userId, userId));
+    .where(eq(memoTable.userId, userId))
+    .orderBy(desc(memoTable.createdAt));
 
   return (
     <>
