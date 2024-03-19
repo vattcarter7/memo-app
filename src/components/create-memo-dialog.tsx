@@ -41,6 +41,7 @@ const CreateMemoDialog = (props: Props) => {
     createMemo.mutate(undefined, {
       onSuccess: ({ memo_id }) => {
         router.push(`/memo/${memo_id}`);
+        router.refresh();
       },
       onError: (error) => {
         console.error(error);
