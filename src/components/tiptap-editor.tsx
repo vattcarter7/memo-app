@@ -18,6 +18,7 @@ const TipTapEditor = ({ memo }: Props) => {
   const [content, setContentState] = useState<string>(
     memo.content || `<h1>${memo.name}</h1>`
   );
+  const [initialLoaded, setInitialLoaded] = useState<boolean>(true);
 
   const saveMemo = useMutation({
     mutationFn: async () => {
@@ -34,6 +35,7 @@ const TipTapEditor = ({ memo }: Props) => {
     extensions: [StarterKit],
     content: content,
     onUpdate: ({ editor }) => {
+      setInitialLoaded(false);
       setContentState(editor.getHTML());
     },
   });
@@ -42,19 +44,19 @@ const TipTapEditor = ({ memo }: Props) => {
 
   useEffect(() => {
     // save to db
-    if (debouncedContent === '') return;
+    if (debouncedContent === '' || initialLoaded) return;
     saveMemo.mutate(undefined, {
       onSuccess: (data) => {
         console.log('success update!', data);
       },
       onError: (err) => {
         console.error(err);
-        window.alert("something went wrong")
+        window.alert('something went wrong');
       },
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedContent]);
-  
+  }, [debouncedContent, initialLoaded]);
+
   return (
     <>
       <div className="flex">
