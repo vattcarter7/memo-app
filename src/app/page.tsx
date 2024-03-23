@@ -8,8 +8,7 @@ export default function Home() {
     <div className="bg-gradient-to-r min-h-screen grainy from-rose-100 to-teal-100">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <h1 className="font-semibold text-7xl text-center">
-          My <span className="text-purple-600 font-bold">Memo</span>{' '}
-          Store.
+          My <span className="text-purple-600 font-bold">Memo</span> Diary.
         </h1>
         <div className="mt-4"></div>
         <div className="mt-8"></div>
